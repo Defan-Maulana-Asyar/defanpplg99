@@ -1,0 +1,24 @@
+body {
+    background-image: url(darkfantasy.jpeg);
+    display: flex;
+    align-items: center;
+    justify-content: center; height: 100vh;
+    background: #fc0000;
+ }
+.container {
+    display: flex;
+    gap: 10px;
+ }
+ tr:hover {
+    background: green;
+}
+.item {
+    background: #fff;
+    width: 100px;
+    height: 100px; cursor: pointer;  
+    border-radius: 5px;
+    box-shadow: 1px 2px 5px 0;
+    transition: 300ms ease-in-out; 
+}  
+.container:hover > :not(:hover) { opacity: .3; 
+}

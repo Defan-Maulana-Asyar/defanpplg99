@@ -1,0 +1,124 @@
+<html>
+<head>
+    <title>Formulir Nota Pembelian</title>
+    <style>
+        body {
+            background-color: blue;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+        .container {
+            width: 60%;
+            margin: 50px auto;
+            background-color: rgba(0, 0, 139, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            border: 2px dashed white;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"], input[type="date"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .payment-options, .menu-options {
+            display: flex;
+            align-items: center;
+        }
+        .payment-options input[type="text"] {
+            width: auto;
+            margin-left: 10px;
+        }
+        .buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .buttons input[type="button"] {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: lightgray;
+            cursor: pointer;
+        }
+    </style>
+        <link rel="stylesheet" href="DarkFantasy.jpg"
+</head>
+<body>
+    <div class="container">
+        <h1>Formulir Nota Pembelian</h1>
+        <form>
+            <label for="nama">Nama Pembeli</label>
+            <input type="text" id="nama" name="nama" placeholder="ketikan nama kamu">
+
+            <label for="alamat">Alamat Pembeli</label>
+            <input type="text" id="alamat" name="alamat" placeholder="ketikan alamatmu">
+
+            <label for="kodepos">Kode Pos</label>
+            <input type="text" id="kodepos" name="kodepos" placeholder="ketikan dan/atau pilih kode pos alamatmu">
+
+            <label for="tanggal">Tanggal Beli</label>
+            <input type="date" id="tanggal" name="tanggal" placeholder="mm/dd/yyyy">
+
+            <label>Pembayaran</label>
+            <div class="payment-options">
+                <input type="radio" id="lunas" name="pembayaran" value="lunas">
+                <label for="lunas">Lunas</label>
+                <input type="radio" id="belum" name="pembayaran" value="belum">
+                <label for="belum">Belum Bayar</label>
+                <input type="radio" id="dp" name="pembayaran" value="dp">
+                <label for="dp">DP</label>
+                <input type="text" id="dp-amount" name="dp-amount" placeholder="ketikan angka uang DP">
+            </div>
+
+            <label for="jenis">Jenis Pembayaran</label>
+            <select id="jenis" name="jenis">
+                <option value="">Pilih</option>
+                <option value="">Debit</option>
+                <option value="">Kredit</option>
+                <option value="">Dana</option>
+            </select>
+
+            <label>Menu</label>
+            <div class="menu-options">
+                <input type="checkbox" id="mie" name="menu" value="mie">
+                <label for="mie">Mie goreng</label>
+                <input type="text" id="mie-amount" name="mie-amount" placeholder="ketikan angka pesanan">
+            </div>
+            <div class="menu-options">
+                <input type="checkbox" id="nasi" name="menu" value="nasi">
+                <label for="nasi">Nasi goreng</label>
+                <input type="text" id="nasi-amount" name="nasi-amount" placeholder="ketikan angka pesanan">
+            </div>
+            <div class="menu-options">
+                <input type="checkbox" id="jeruk" name="menu" value="jeruk">
+                <label for="jeruk">Jeruk</label>
+                <input type="text" id="jeruk-amount" name="jeruk-amount" placeholder="ketikan angka pesanan">
+            </div>
+            <div class="menu-options">
+                <input type="checkbox" id="teh" name="menu" value="teh">
+                <label for="teh">Teh</label>
+                <input type="text" id="teh-amount" name="teh-amount" placeholder="ketikan angka pesanan">
+            </div>
+
+            <div class="buttons">
+                <input type="button" value="Clear">
+                <input type="button" value="Send">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
